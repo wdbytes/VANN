@@ -1,3 +1,7 @@
+* {
+  text-wrap: pretty;
+}
+
 .site-heading img {
   max-width: 500px;
 }
@@ -8,4 +12,43 @@
 
 .intro-button img {
   width: 30px;
+}
+
+#services_list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* Carousel */
+.carousel {
+  margin-top: 2.5rem;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.carousel-inner {
+  display: flex; /* Use flex for horizontal layout */
+  animation: scroll 20s linear infinite;
+}
+
+.carousel img {
+  width: 200px; /* Adjust as needed */
+  height: auto;
+  margin: 0 10px; /* Space between images */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      -100%
+    ); /* Change to -100% to account for all images */
+  }
 }

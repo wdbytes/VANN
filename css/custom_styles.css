@@ -24,7 +24,7 @@
 
 /* Carousel */
 .carousel {
-  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
@@ -33,13 +33,15 @@
 
 .carousel-inner {
   display: flex; /* Use flex for horizontal layout */
-  animation: scroll 20s linear infinite;
+  animation: scroll 7s linear infinite;
 }
 
 .carousel img {
-  width: 200px; /* Adjust as needed */
+  width: 250px; /* Adjust as needed */
   height: auto;
   margin: 0 10px; /* Space between images */
+  border-radius: 10%;
+  border: solid 3px black;
 }
 
 @keyframes scroll {

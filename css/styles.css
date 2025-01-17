@@ -7882,6 +7882,7 @@ fieldset:disabled .btn {
 .mx-auto {
   margin-right: auto !important;
   margin-left: auto !important;
+  text-align: center;
 }
 
 .my-0 {
@@ -8580,6 +8581,7 @@ fieldset:disabled .btn {
 
 .rounded {
   border-radius: var(--bs-border-radius) !important;
+  border: 3.5px solid #000000;
 }
 
 .rounded-0 {
@@ -11208,7 +11210,7 @@ p {
 }
 
 .page-section {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   margin-bottom: 3rem;
 }
 
@@ -11237,6 +11239,7 @@ p {
   padding-bottom: 1.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  border: solid #43351e;
 }
 
 #mainNav {

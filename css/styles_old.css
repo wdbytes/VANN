@@ -7887,6 +7887,7 @@ fieldset:disabled .btn {
 .mx-auto {
   margin-right: auto !important;
   margin-left: auto !important;
+  text-align: center;
 }
 
 .my-0 {

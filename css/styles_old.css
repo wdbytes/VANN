@@ -3894,6 +3894,9 @@ fieldset:disabled .btn {
   align-items: center;
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+  position: sticky;
+  top: 0;
+  z-index: 9999;
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -3933,6 +3936,8 @@ fieldset:disabled .btn {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  align-items: center;
+  padding-top: 10px;
 }
 .navbar-nav .show > .nav-link,
 .navbar-nav .nav-link.active {
@@ -7977,6 +7982,9 @@ fieldset:disabled .btn {
 
 .mb-0 {
   margin-bottom: 0 !important;
+  text-align: justify;
+  text-indent: 30px;
+  /* text-wrap: pretty; */
 }
 
 .mb-1 {
@@ -7988,11 +7996,11 @@ fieldset:disabled .btn {
 }
 
 .mb-3 {
-  margin-bottom: 1rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
 .mb-4 {
-  margin-bottom: 1.5rem !important;
+  /* margin-bottom: 1.5rem !important; */
 }
 
 .mb-5 {
@@ -8052,7 +8060,7 @@ fieldset:disabled .btn {
 }
 
 .p-5 {
-  padding: 3rem !important;
+  padding: 1.5rem !important;
 }
 
 .px-0 {
@@ -11188,8 +11196,8 @@ p {
 }
 
 .site-heading {
-  margin-top: 1rem;
-  margin-bottom: 1.25rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   text-transform: uppercase;
   line-height: 1;
   font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -11208,8 +11216,8 @@ p {
 }
 
 .page-section {
-  margin-top: 2rem;
-  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .section-heading {
@@ -11227,7 +11235,7 @@ p {
 }
 
 .bg-faded {
-  background-color: #f6e1c5;
+  background-color: rgb(239, 225, 198, 0.9);
 }
 
 .btn-xl {
@@ -11311,17 +11319,29 @@ p {
 
 .intro {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 @media (min-width: 992px) {
+  .cta {
+    margin-top: 75px;
+  }
+
   .intro .intro-img {
-    width: 70%;
+    width: 75%;
     float: right;
   }
   .intro .intro-text {
     left: 0;
-    width: 60%;
+    width: 80%;
     margin-top: 3rem;
-    position: absolute;
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .intro .intro-text .intro-button {
     width: 100%;
@@ -11332,7 +11352,7 @@ p {
 }
 @media (min-width: 1200px) {
   .intro .intro-text {
-    width: 45%;
+    width: 70%;
   }
 }
 

@@ -11235,8 +11235,8 @@ p {
 .btn-xl {
   font-weight: 700;
   font-size: 0.8rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
   border: solid #43351e;
@@ -11331,6 +11331,7 @@ p {
     left: 0;
     position: absolute;
     bottom: -2rem;
+    text-align: center;
   }
 }
 @media (min-width: 1200px) {

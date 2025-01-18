@@ -30,27 +30,19 @@
   position: relative;
 }
 @media (min-width: 992px) {
-  .services .services-img {
-    width: 100%;
-    float: right;
-  }
   .services .services-text {
-    left: 0;
-    width: 100%;
     margin-top: 3rem;
     position: absolute;
   }
   .services .services-text .services-button {
     width: 100%;
-    left: 0;
     position: absolute;
     bottom: -0.5rem;
-    text-align: center;
   }
 }
 @media (min-width: 1200px) {
   .services .services-text {
-    width: 45%;
+    width: 100%;
   }
 }
 
@@ -65,7 +57,7 @@
 
 .carousel-inner {
   display: flex; /* Use flex for horizontal layout */
-  animation: scroll 0s linear infinite;
+  animation: scroll 30s linear infinite;
 }
 
 .carousel img {
@@ -115,6 +107,7 @@
   bottom: -3.5%; /* Adjust as needed */
   right: 0; /* Adjust as needed */
   width: 20%; /* Adjust size as needed */
+  max-width: 175px;
   height: auto;
 }
 
@@ -127,4 +120,22 @@
 .why-mascot-overlay {
   position: relative;
   max-width: 100%;
+}
+
+.overlay-container {
+  position: absolute;
+  width: 70%;
+  height: 95%;
+}
+
+.grid-overlay {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows */
+  gap: 0;
+}
+
+.grid-overlay img {
+  border-radius: 50%; /* Optional: rounded corners */
+  max-height: 120px;
 }

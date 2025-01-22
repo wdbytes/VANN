@@ -2521,14 +2521,14 @@ input[type="radio"] + label:before {
 /* Image */
 
 .image {
-  border-radius: 5px;
+  border-radius: 100%;
   border: 0;
   display: inline-block;
   position: relative;
 }
 
 .image img {
-  border-radius: 5px;
+  border-radius: 100%;
   display: block;
 }
 
@@ -3505,7 +3505,7 @@ body.is-menu-visible #menu .inner {
 }
 
 #banner .logo img {
-  width: 55%;
+  width: 75%;
 }
 
 #banner h2 {

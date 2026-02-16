@@ -1,0 +1,87 @@
+* {
+  font-family: Raleway, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 20px 20px 0px;
+  background-color: black;
+}
+h1 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+img {
+  width: 100%;
+  min-width: 300px;
+  max-width: 500px;
+  height: auto;
+  margin-top: 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+  h1,
+  h2 {
+    text-align: left;
+  }
+  img {
+    margin-top: 0;
+  }
+}
+.white-block {
+  position: relative; /* Needed for positioning the pseudo-element */
+  padding-left: 50px;
+  text-align: left;
+}
+
+.white-block::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 21px;
+  height: 80%;
+  width: 12px;
+  background-color: rgb(255, 255, 255);
+}
+
+#title {
+  font-size: 1.25em;
+  letter-spacing: 0.3em;
+  font-weight: 600;
+  line-height: 60px;
+}
+
+#subtitle {
+  font-size: 2em;
+  margin-top: 25px;
+  line-height: 30px;
+  font-weight: 1000;
+}
+
+#description {
+  font-size: 2.25em;
+  line-height: 40px;
+  margin: 1.25rem 3rem 2rem 3.5rem;
+  font-weight: bold;
+  width: 85%;
+  text-align: center;
+
+  border-radius: 55px; /* Combined border-radius for all corners */
+
+  padding: 30px 30px 30px 30px;
+
+  box-shadow: rgba(255, 255, 255, 0.17) 0px -23px 25px 0px inset;
+}

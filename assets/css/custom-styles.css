@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px 20px 20px 0px;
+  padding: 30px 20px 20px 0px;
   background-color: black;
 }
 h1 {
@@ -23,7 +23,7 @@ h2 {
 img {
   width: 100%;
   min-width: 300px;
-  max-width: 500px;
+  max-width: 700px;
   height: auto;
   margin-top: 15px;
 }
@@ -41,47 +41,50 @@ img {
     margin-top: 0;
   }
 }
+
 .white-block {
   position: relative; /* Needed for positioning the pseudo-element */
-  padding-left: 50px;
+  padding-left: 30px;
   text-align: left;
-}
-
-.white-block::before {
-  content: "";
-  position: absolute;
-  left: 3px;
-  top: 21px;
-  height: 80%;
-  width: 12px;
-  background-color: rgb(255, 255, 255);
+  border-left: 12px solid white;
+  margin-left: 5px;
 }
 
 #title {
-  font-size: 1.25em;
+  font-size: 4vw; /* Use viewport width for responsive scaling */
   letter-spacing: 0.3em;
   font-weight: 600;
-  line-height: 60px;
+  line-height: 0;
 }
 
 #subtitle {
-  font-size: 2em;
+  font-size: 6vw; /* Use viewport width for responsiveness */
   margin-top: 25px;
-  line-height: 30px;
+  line-height: 1.2; /* Adjusted for better spacing */
   font-weight: 1000;
 }
 
 #description {
-  font-size: 2.25em;
-  line-height: 40px;
-  margin: 1.25rem 3rem 2rem 3.5rem;
-  font-weight: bold;
-  width: 85%;
+  font-size: 7vw; /* Use viewport width for responsiveness */
+  line-height: 1;
+  margin: auto;
+  width: 80%;
   text-align: center;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+  margin-bottom: 15px;
+}
 
-  border-radius: 55px; /* Combined border-radius for all corners */
+/* Optional: Media Queries for further adjustments on larger screens */
+@media (min-width: 768px) {
+  #title {
+    font-size: 1em; /* Use fixed size for larger screens */
+  }
 
-  padding: 30px 30px 30px 30px;
+  #subtitle {
+    font-size: 2em; /* Use fixed size for larger screens */
+  }
 
-  box-shadow: rgba(255, 255, 255, 0.17) 0px -23px 25px 0px inset;
+  #description {
+    font-size: 3em; /* Use fixed size for larger screens */
+  }
 }

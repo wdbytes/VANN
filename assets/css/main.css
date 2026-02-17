@@ -3639,7 +3639,7 @@ body.is-menu-visible #menu .inner {
 
 @media screen and (max-width: 980px) {
   #banner {
-    padding: 12em 3em 12.375em 3em;
+    padding: 5em 3em 12.375em 3em;
     margin-bottom: -4.75em;
   }
 
@@ -3667,7 +3667,7 @@ body.is-menu-visible #menu .inner {
   }
 
   #banner p {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 }
 

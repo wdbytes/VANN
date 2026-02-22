@@ -3639,7 +3639,7 @@ body.is-menu-visible #menu .inner {
 
 @media screen and (max-width: 980px) {
   #banner {
-    padding: 5em 3em 12.375em 3em;
+    padding: 5em 3em 9em 3em;
     margin-bottom: -4.75em;
   }
 
@@ -3669,6 +3669,14 @@ body.is-menu-visible #menu .inner {
   #banner p {
     font-size: 1em;
   }
+}
+
+body.is-preload .container {
+  -moz-transform: translateY(0.5em);
+  -webkit-transform: translateY(0.5em);
+  -ms-transform: translateY(0.5em);
+  transform: translateY(0.5em);
+  opacity: 0;
 }
 
 body.is-preload #banner .logo {
@@ -3777,9 +3785,13 @@ body.is-preload #banner p {
 }
 
 .wrapper {
-  background-color: #000;
   margin: 6.5em 0;
   position: relative;
+  background-color: black;
+}
+
+.wrapper.alt {
+  background-color: #45558d;
 }
 
 .wrapper:before,

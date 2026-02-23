@@ -42,12 +42,20 @@ img {
   }
 }
 
-.white-block {
+.white-block-left {
   position: relative; /* Needed for positioning the pseudo-element */
   padding-left: 30px;
   text-align: left;
   border-left: 12px solid white;
   margin-left: 5px;
+}
+
+.white-block-right {
+  position: relative; /* Needed for positioning the pseudo-element */
+  padding-right: 30px;
+  text-align: right;
+  border-right: 12px solid white;
+  margin-right: 5px;
 }
 
 #title {

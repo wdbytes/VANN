@@ -3244,6 +3244,7 @@ button:disabled,
 }
 
 #header nav a[href="#menu"] {
+  text-align: center;
   text-decoration: none;
   -moz-transition: background-color 0.2s ease-in-out;
   -webkit-transition: background-color 0.2s ease-in-out;
@@ -3422,6 +3423,7 @@ button:disabled,
 #menu h2 {
   border-bottom: solid 2px rgba(255, 255, 255, 0.125);
   padding-bottom: 1em;
+  text-align: center;
 }
 
 #menu .close {

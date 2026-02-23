@@ -36,32 +36,8 @@ function updateCarousel() {
     `translateX(${offset}%)`;
 }
 
-function handleTouchStart(event) {
-  startX = event.touches[0].clientX; // Get the initial touch position
-}
-
-function handleTouchMove(event) {
-  const currentX = event.touches[0].clientX; // Get the current touch position
-  const differenceX = startX - currentX; // Calculate the difference
-
-  if (differenceX > 50) {
-    // Swipe left
-    nextSlide();
-  } else if (differenceX < -50) {
-    // Swipe right
-    prevSlide();
-  }
-}
-
 // Set auto-scrolling interval
 autoScrollInterval = setInterval(autoScroll, 3000); // Change slide every 3 seconds
-
-document
-  .getElementById("myUniqueCarousel")
-  .addEventListener("touchstart", handleTouchStart);
-document
-  .getElementById("myUniqueCarousel")
-  .addEventListener("touchmove", handleTouchMove);
 
 // Nav Jump
 $(".links a").click(function (event) {

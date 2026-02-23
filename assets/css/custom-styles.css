@@ -88,3 +88,8 @@ img {
     font-size: 3em; /* Use fixed size for larger screens */
   }
 }
+
+#two,
+#three {
+  border-top: 3.5px solid #ffffff00;
+}

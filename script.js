@@ -1,6 +1,7 @@
 let index = 0;
 const items = document.querySelectorAll(".unique-carousel-item");
 const totalItems = items.length;
+let startX;
 
 function autoScroll() {
   index++;
@@ -31,6 +32,30 @@ function updateCarousel() {
   document.getElementById("myUniqueCarouselInner").style.transform =
     `translateX(${offset}%)`;
 }
+
+function handleTouchStart(event) {
+  startX = event.touches[0].clientX; // Get the initial touch position
+}
+
+function handleTouchMove(event) {
+  const currentX = event.touches[0].clientX; // Get the current touch position
+  const differenceX = startX - currentX; // Calculate the difference
+
+  if (differenceX > 50) {
+    // Swipe left
+    nextSlide();
+  } else if (differenceX < -50) {
+    // Swipe right
+    prevSlide();
+  }
+}
+
+document
+  .getElementById("myUniqueCarousel")
+  .addEventListener("touchstart", handleTouchStart);
+document
+  .getElementById("myUniqueCarousel")
+  .addEventListener("touchmove", handleTouchMove);
 
 setInterval(autoScroll, 3000); // Change slide every 3 seconds
 

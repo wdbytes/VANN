@@ -2,6 +2,7 @@ let index = 0;
 const items = document.querySelectorAll(".unique-carousel-item");
 const totalItems = items.length;
 let startX;
+let autoScrollInterval;
 
 function autoScroll() {
   index++;
@@ -17,6 +18,7 @@ function nextSlide() {
     index = 0;
   }
   updateCarousel();
+  clearInterval(autoScrollInterval); // Stop auto-scrolling
 }
 
 function prevSlide() {
@@ -25,6 +27,7 @@ function prevSlide() {
     index = totalItems - 1;
   }
   updateCarousel();
+  clearInterval(autoScrollInterval); // Stop auto-scrolling
 }
 
 function updateCarousel() {
@@ -50,14 +53,15 @@ function handleTouchMove(event) {
   }
 }
 
+// Set auto-scrolling interval
+autoScrollInterval = setInterval(autoScroll, 3000); // Change slide every 3 seconds
+
 document
   .getElementById("myUniqueCarousel")
   .addEventListener("touchstart", handleTouchStart);
 document
   .getElementById("myUniqueCarousel")
   .addEventListener("touchmove", handleTouchMove);
-
-setInterval(autoScroll, 3000); // Change slide every 3 seconds
 
 // Nav Jump
 $(".links a").click(function (event) {
@@ -73,4 +77,27 @@ $(".links a").click(function (event) {
     },
     500,
   ); // Optional duration for scrolling animation
+});
+
+//Fade-In
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".fade-in");
+
+  const options = {
+    root: null, // Use the viewport
+    threshold: 0.1, // Trigger when 10% of the element is visible
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target); // Stop observing once the element is visible
+      }
+    });
+  }, options);
+
+  elements.forEach((element) => {
+    observer.observe(element);
+  });
 });

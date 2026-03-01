@@ -105,10 +105,12 @@ img {
   }
 }
 
-#two,
-#three,
-#about {
-  border-top: 1px solid #ffffff00;
+#section-container {
+  background: linear-gradient(90deg, rgba(83, 94, 148, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(192, 131, 54, 1) 100%);
+}
+
+.wrapper {
+  border-top: 3px solid #ffffff00;
 }
 
 .fade-in {
@@ -122,4 +124,19 @@ img {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black; /* or any color you prefer */
+  color: white; /* text color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px; /* adjust as needed */
+  z-index: 1000; /* ensure it is on top */
 }

@@ -32,8 +32,7 @@ function prevSlide() {
 
 function updateCarousel() {
   const offset = -index * 100;
-  document.getElementById("myUniqueCarouselInner").style.transform =
-    `translateX(${offset}%)`;
+  document.getElementById("myUniqueCarouselInner").style.transform = `translateX(${offset}%)`;
 }
 
 // Set auto-scrolling interval

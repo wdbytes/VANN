@@ -189,9 +189,7 @@ html {
 
 body {
   background-color: #000;
-  background-image:
-    linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)),
-    url("../../images/bg.jpg");
+  background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../assets/images/bg.jpg");
   background-size: auto, cover;
   background-attachment: fixed, fixed;
   background-position: center, center;
@@ -3427,7 +3425,7 @@ button:disabled,
 }
 
 #menu .close {
-  background-image: url("../images/close.svg");
+  background-image: url("../images/icons/close.svg");
   background-position: 75% 25%;
   background-repeat: no-repeat;
   background-size: 2em 2em;
@@ -3630,9 +3628,7 @@ body.is-menu-visible #menu .inner {
   #banner {
     padding: 7em 0 8.25em 0;
     background-color: #000;
-    background-image:
-      linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)),
-      url("../../images/bg.jpg");
+    background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../assets/images/bg.jpg");
     background-size: auto, cover;
     background-position: center, center;
     margin-bottom: -6.5em;
@@ -3744,9 +3740,7 @@ body.is-preload #banner p {
   #wrapper > header {
     padding: 9em 0 6.25em 0;
     background-color: #000;
-    background-image:
-      linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)),
-      url("../../images/bg.jpg");
+    background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../assets/images/bg.jpg");
     background-size: auto, cover;
     background-position:
       center,

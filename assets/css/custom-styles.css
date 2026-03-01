@@ -64,17 +64,20 @@ img {
 }
 
 #title {
-  font-size: 3vw; /* Use viewport width for responsive scaling */
+  font-size: 3vw; /* Responsive font-size */
   letter-spacing: 0.35em;
   font-weight: 600;
-  line-height: 0;
+  line-height: 1.35; /* Minimal line-height */
+  display: inline-block; /* This allows you to use padding/margins if needed */
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 #subtitle {
   font-size: 6vw; /* Use viewport width for responsiveness */
-  margin-top: 25px;
-  line-height: 1.2; /* Adjusted for better spacing */
-  font-weight: 1000;
+  display: inline-block; /* This allows you to use padding/margins if needed */
+  line-height: 1; /* Adjusted for better spacing */
+  font-weight: bold;
 }
 
 #description {
@@ -84,7 +87,6 @@ img {
   width: 80%;
   text-align: center;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
-  margin-bottom: 15px;
 }
 
 /* Optional: Media Queries for further adjustments on larger screens */

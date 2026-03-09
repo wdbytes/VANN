@@ -218,7 +218,6 @@ textarea {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 16.5pt;
   font-weight: 300;
-  line-height: 1.65;
 }
 
 @media screen and (max-width: 1680px) {
@@ -3097,7 +3096,7 @@ button:disabled,
   input[type="button"],
   button,
   .button {
-    padding: 0;
+    padding: 1;
   }
 }
 
@@ -3510,7 +3509,7 @@ body.is-menu-visible #menu .inner {
 
 #banner .inner {
   margin: 0 auto;
-  width: 55em;
+  width: 60em;
 }
 
 #banner .logo {
@@ -3584,6 +3583,40 @@ body.is-menu-visible #menu .inner {
   font-size: 2.25em;
   margin-bottom: 0.8em;
   padding-bottom: 0.4em;
+}
+
+#banner h3 {
+  -moz-transition:
+    opacity 0.5s ease,
+    -moz-transform 0.5s ease,
+    -moz-filter 0.25s ease;
+  -webkit-transition:
+    opacity 0.5s ease,
+    -webkit-transform 0.5s ease,
+    -webkit-filter 0.25s ease;
+  -ms-transition:
+    opacity 0.5s ease,
+    -ms-transform 0.5s ease,
+    -ms-filter 0.25s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    filter 0.25s ease;
+  -moz-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  -moz-transition-delay: 0.75s;
+  -webkit-transition-delay: 0.75s;
+  -ms-transition-delay: 0.75s;
+  transition-delay: 0.75s;
+  -moz-filter: blur(0);
+  -webkit-filter: blur(0);
+  -ms-filter: blur(0);
+  filter: blur(0);
+  opacity: 1;
+  font-size: 1.25em;
+  margin-bottom: 0.4em;
 }
 
 #banner p {
@@ -3664,8 +3697,32 @@ body.is-menu-visible #menu .inner {
     font-size: 1.5em;
   }
 
+  #banner h3 {
+    font-size: 1em;
+  }
+
   #banner p {
     font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #banner h2 {
+    font-size: 1.2em;
+  }
+
+  #banner h3 {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #banner h2 {
+    font-size: 1em;
+  }
+
+  #banner h3 {
+    font-size: 0.8em;
   }
 }
 
@@ -3686,6 +3743,18 @@ body.is-preload #banner .logo {
 }
 
 body.is-preload #banner h2 {
+  opacity: 0;
+  -moz-transform: translateX(0.25em);
+  -webkit-transform: translateX(0.25em);
+  -ms-transform: translateX(0.25em);
+  transform: translateX(0.25em);
+  -moz-filter: blur(2px);
+  -webkit-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
+
+body.is-preload #banner h3 {
   opacity: 0;
   -moz-transform: translateX(0.25em);
   -webkit-transform: translateX(0.25em);

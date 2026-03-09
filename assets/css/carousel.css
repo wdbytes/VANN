@@ -1,9 +1,7 @@
 .unique-carousel {
-  margin: auto;
   width: 100%; /* Responsive width */
   max-width: 600px; /* Max width for larger screens */
   overflow: hidden;
-  border-radius: 10px;
   position: relative;
   margin-bottom: 25px;
 }
@@ -16,11 +14,6 @@
 .unique-carousel-item {
   min-width: 100%;
   box-sizing: border-box;
-}
-
-.unique-carousel img {
-  width: 100%;
-  border-radius: 10px;
 }
 
 img {
@@ -53,7 +46,6 @@ img {
   right: 10px;
 }
 
-/* Media Queries for Responsiveness */
 @media (max-width: 600px) {
   .unique-arrow {
     font-size: 18px; /* Smaller font size for mobile */
@@ -66,4 +58,29 @@ img {
     font-size: 24px; /* Larger font size for desktop */
     padding: 10px;
   }
+}
+
+.review {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.profile-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.review p {
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+
+img {
+  min-width: unset; /* Override any other width settings */
 }

@@ -1,7 +1,7 @@
+//CAROUSEL
 let index = 0;
 const items = document.querySelectorAll(".unique-carousel-item");
 const totalItems = items.length;
-let startX;
 let autoScrollInterval;
 
 function autoScroll() {
@@ -36,10 +36,10 @@ function updateCarousel() {
 }
 
 // Set auto-scrolling interval
-autoScrollInterval = setInterval(autoScroll, 3000); // Change slide every 3 seconds
+autoScrollInterval = setInterval(autoScroll, 7000); // Change slide every 3 seconds
 
 // Nav Jump
-$(".links a").click(function (event) {
+$("a[href^='#']").click(function (event) {
   event.preventDefault(); // Prevent default anchor click behavior
 
   let headerHeight = document.getElementById("header").offsetHeight; // Adjust header ID to lowercase

@@ -63,6 +63,21 @@ document.addEventListener("DOMContentLoaded", function () {
     threshold: 0.1, // Trigger when 10% of the element is visible
   };
 
+  const headerEl = document.getElementById('header');
+
+  function updateHeaderOnScroll() {
+    if (!headerEl) return;
+
+    if (window.scrollY > 0) {
+      headerEl.classList.add('scrolled');
+    } else {
+      headerEl.classList.remove('scrolled');
+    }
+  }
+
+  window.addEventListener('scroll', updateHeaderOnScroll, { passive: true });
+  updateHeaderOnScroll();
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {

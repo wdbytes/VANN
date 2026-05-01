@@ -34,11 +34,10 @@ img {
   .container {
     flex-direction: row;
     justify-content: space-between;
-    text-align: left;
   }
   h1,
   h2 {
-    text-align: left;
+    /* text-align: left; */
   }
   img {
     margin-top: 0;
@@ -64,7 +63,8 @@ img {
 #header nav {
   display: flex;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #title {

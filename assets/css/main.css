@@ -3308,6 +3308,10 @@ button:disabled,
     line-height: inherit;
   }
 
+  #header nav a {
+    padding: 0 !important;
+  }
+
   #header nav a[href="#menu"] {
     box-shadow: none;
     padding: 0 1em;

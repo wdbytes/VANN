@@ -3408,7 +3408,7 @@ button:disabled,
     opacity 0.35s ease,
     transform 0.35s ease;
   -webkit-overflow-scrolling: touch;
-  background: #4c5c96;
+  background: linear-gradient(120deg, #0b1220, #0f1b35);
   border-radius: 5px;
   display: block;
   max-width: 100%;

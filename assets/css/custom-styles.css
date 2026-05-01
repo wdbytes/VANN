@@ -26,7 +26,6 @@ h2 {
 }
 img {
   width: 100%;
-  min-width: 300px;
   max-width: 600px;
   height: auto;
   margin-top: 15px;
@@ -60,6 +59,12 @@ img {
   text-align: right;
   border-right: 12px solid white;
   margin-right: 5px;
+}
+
+#header nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
 }
 
 #title {

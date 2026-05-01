@@ -9,20 +9,25 @@ body {
   position: relative;
   /* background: linear-gradient(120deg, #0b1220, #0f1b35); */
   overflow: hidden;
-  padding-bottom: 12%;
 }
 
 /* subtle glow */
 .hero::before {
   content: "";
   position: absolute;
+  top: 0;
+  left: 0;
   width: 120%;
   height: 120%;
   background: radial-gradient(circle at 70% 40%, rgba(255, 140, 0, 0.15), transparent 40%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 /* NAV */
 .nav {
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,10 +55,20 @@ body {
   gap: 20px;
 }
 
-.contact span {
-  margin-right: 15px;
-  font-size: 0.85rem;
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact a {
   color: #94a3b8;
+  text-decoration: none;
+  pointer-events: auto;
+}
+
+.contact span {
+  font-size: 0.85rem;
 }
 
 /* BUTTONS */
@@ -86,6 +101,7 @@ body {
 
 .logo img {
   height: auto;
+  padding: 0 12px 0 12px;
 }
 
 .tag {
@@ -210,12 +226,16 @@ body {
 
 /* small: 481px - 736px */
 @media (max-width: 736px) {
+  .hero {
+    padding-bottom: 12%;
+  }
+
   .nav {
     padding: 15px 20px;
   }
 
   .hero-inner {
-    padding: 60px 20px 30px;
+    padding: 110px 20px 30px;
   }
 
   .hero h1 {

@@ -179,6 +179,7 @@ body {
 
 html {
   box-sizing: border-box;
+  width: 100%;
 }
 
 *,
@@ -188,6 +189,8 @@ html {
 }
 
 body {
+  width: 100%;
+  overflow-x: hidden;
   background-color: #000;
   background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../assets/images/bg.jpg");
   background-size: auto, cover;
@@ -3408,7 +3411,7 @@ button:disabled,
     opacity 0.35s ease,
     transform 0.35s ease;
   -webkit-overflow-scrolling: touch;
-  background: linear-gradient(120deg, #0b1220, #0f1b35);
+  background: linear-gradient(180deg, #0b1220, #0f1b35);
   border-radius: 5px;
   display: block;
   max-width: 100%;

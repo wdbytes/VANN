@@ -192,7 +192,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   background-color: #000;
-  background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../assets/images/bg.jpg");
+  background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../assets/images/bg_alt.webp");
   background-size: auto, cover;
   background-attachment: fixed, fixed;
   background-position: center, center;
@@ -289,6 +289,14 @@ a {
 a:hover {
   border-bottom-color: transparent;
   color: #ffffff !important;
+}
+
+ul.contact a,
+ul.contact a:hover,
+ul.contact a:focus,
+ul.contact a:active {
+  text-decoration: none;
+  border-bottom: 0 !important;
 }
 
 a.special:not(.button) {
@@ -2776,10 +2784,13 @@ ul.contact {
 }
 
 ul.contact li {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   margin: 2.5em 0 0 0;
-  padding: 0.45em 0 0 3.25em;
+  padding: 0 0 0 3.25em;
   position: relative;
+  min-height: 2.5em;
 }
 
 ul.contact li:before {
@@ -2805,7 +2816,8 @@ ul.contact li:before {
   line-height: 2.35em;
   position: absolute;
   text-align: center;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 2.5em;
 }
 
@@ -3669,7 +3681,6 @@ body.is-menu-visible #menu .inner {
   #banner {
     padding: 7em 0 8.25em 0;
     background-color: #000;
-    background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../assets/images/bg.jpg");
     background-size: auto, cover;
     background-position: center, center;
     margin-bottom: -6.5em;
@@ -3817,7 +3828,6 @@ body.is-preload #banner p {
   #wrapper > header {
     padding: 9em 0 6.25em 0;
     background-color: #000;
-    background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../assets/images/bg.jpg");
     background-size: auto, cover;
     background-position:
       center,
@@ -3920,7 +3930,7 @@ body.is-preload #banner p {
 }
 
 .wrapper .inner {
-  padding: 3em 0 1em 0;
+  padding: 2em 0 2em 0;
   margin: 0 auto;
   width: 55em;
 }
@@ -4247,7 +4257,7 @@ body.is-preload #banner p {
   }
 
   .wrapper .inner {
-    padding: 2em 2em 0.1em 2em;
+    padding: 2em 2em 2em 2em;
   }
 
   .wrapper.spotlight .inner {
@@ -4321,7 +4331,7 @@ body.is-preload #banner p {
 #footer .inner .copyright {
   border-top: solid 2px rgba(255, 255, 255, 0.125);
   list-style: none;
-  margin: 4em 0 2em 0;
+  margin: 1em 0 2em 0;
   padding: 2em 0 0 0;
   width: 100%;
 }
@@ -4349,12 +4359,6 @@ body.is-preload #banner p {
 
 @media screen and (max-width: 1280px) {
   #footer {
-    /* background-color: #000;
-    background-image:
-      linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)),
-      url("../../images/bg.jpg");
-    background-size: auto, cover;
-    background-position: center, center; */
     margin-top: -6.5em;
     padding-top: 6.5em;
   }
@@ -4383,7 +4387,7 @@ body.is-preload #banner p {
   }
 
   #footer .inner .copyright {
-    margin: 4em 0 2em 0;
+    margin: 1em 0 2em 0;
   }
 }
 

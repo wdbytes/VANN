@@ -57,9 +57,17 @@ body {
 
 .contact {
   display: flex;
-  align-items: center;
-  gap: 15px;
-  padding-left: 16px;
+  align-items: left;
+  flex-direction: column;
+  line-height: 2;
+  font-size: smaller;
+  padding: 4px 0 0 8px;
+}
+
+.contact a {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .contact a {

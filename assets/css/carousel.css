@@ -64,7 +64,19 @@ img {
   display: flex;
   align-items: center;
   gap: 15px;
-  justify-content: center;
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.stars {
+  text-align: center;
+  font-size: 1.2em;
+  padding-bottom: 8px;
 }
 
 .profile-icon {
@@ -77,8 +89,7 @@ img {
 
 .review p {
   margin: 0;
-  flex: 1;
-  text-align: left;
+  text-align: center;
 }
 
 img {

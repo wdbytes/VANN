@@ -198,6 +198,13 @@ body {
   /* background-position: center, center; */
 }
 
+@media screen and (max-width: 980px) {
+  body {
+    background-attachment: scroll, scroll;
+    background-size: auto, auto;
+  }
+}
+
 /* Type */
 
 body,

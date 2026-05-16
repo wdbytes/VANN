@@ -96,7 +96,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 65vh;
-  padding: 60px 60px 0 60px;
+  padding: 60px 60px 60px 60px;
 }
 
 .hero-text {

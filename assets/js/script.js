@@ -1,42 +1,59 @@
 //CAROUSEL
-let index = 0;
-const items = document.querySelectorAll(".unique-carousel-item");
-const totalItems = items.length;
-let autoScrollInterval;
+const carousels = document.querySelectorAll(".unique-carousel");
 
-function autoScroll() {
-  index++;
-  if (index >= totalItems) {
-    index = 0;
-  }
+carousels.forEach((carousel, carouselIndex) => {
+  const inner = carousel.querySelector(".unique-carousel-inner");
+  const items = carousel.querySelectorAll(".unique-carousel-item");
+  if (!inner || items.length === 0) return;
+
+  let index = 0;
+  let autoScrollInterval;
+
+  const updateCarousel = () => {
+    inner.style.transform = `translateX(${-index * 100}%)`;
+  };
+
+  const setBackgrounds = () => {
+    carousel.querySelectorAll(".carousel-image-panel").forEach((panel) => {
+      const img = panel.querySelector("img");
+      if (!img || !img.src) return;
+      panel.style.setProperty("--carousel-bg", `url('${img.src}')`);
+    });
+  };
+
+  const startAutoScroll = () => {
+    autoScrollInterval = setInterval(() => {
+      index = (index + 1) % items.length;
+      updateCarousel();
+    }, 7000);
+  };
+
+  const resetAutoScroll = () => {
+    clearInterval(autoScrollInterval);
+    startAutoScroll();
+  };
+
+  carousel.querySelector(".unique-arrow-left")?.addEventListener("click", () => {
+    index = index > 0 ? index - 1 : items.length - 1;
+    updateCarousel();
+    resetAutoScroll();
+  });
+
+  carousel.querySelector(".unique-arrow-right")?.addEventListener("click", () => {
+    index = (index + 1) % items.length;
+    updateCarousel();
+    resetAutoScroll();
+  });
+
+  setBackgrounds();
   updateCarousel();
-}
 
-function nextSlide() {
-  index++;
-  if (index >= totalItems) {
-    index = 0;
-  }
-  updateCarousel();
-  clearInterval(autoScrollInterval); // Stop auto-scrolling
-}
-
-function prevSlide() {
-  index--;
-  if (index < 0) {
-    index = totalItems - 1;
-  }
-  updateCarousel();
-  clearInterval(autoScrollInterval); // Stop auto-scrolling
-}
-
-function updateCarousel() {
-  const offset = -index * 100;
-  document.getElementById("myUniqueCarouselInner").style.transform = `translateX(${offset}%)`;
-}
-
-// Set auto-scrolling interval
-autoScrollInterval = setInterval(autoScroll, 7000); // Change slide every 3 seconds
+  // Offset the start time for each carousel
+  const offset = carouselIndex * 3500; // 3.5 second offset per carousel
+  setTimeout(() => {
+    startAutoScroll();
+  }, offset);
+});
 
 // Nav Jump
 $("a[href^='#']").click(function (event) {

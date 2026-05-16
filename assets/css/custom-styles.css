@@ -193,8 +193,3 @@ img {
 .black-and-white {
   filter: grayscale(100%);
 }
-
-#about img {
-  border-radius: 8px;
-  margin-bottom: 12px;
-}
